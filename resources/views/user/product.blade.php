@@ -7,7 +7,7 @@
         Home
     </a>
     <span class="mx-2 text-gray-500">›</span>
-        <a href="/products/{id}" class="text-blue-500 hover:underline">Product Details</a>
+        <a href="" class="text-blue-500 hover:underline">Product Details</a>
 </div>
     <main>
         <div class="h-screen flex bg-white">
@@ -47,15 +47,40 @@
 
     <script>
         function addToCart(productId) {
-            var colorId = document.getElementById('color').value;
-            var quantity = document.getElementById('quantity').value;
-            window.location.href = `/cart/${productId}?color=${colorId}&quantity=${quantity}`;
+            try {
+                var colorId = document.getElementById('color').value;
+                var quantity = document.getElementById('quantity').value;
+    
+                // Convert quantity to a number and check if it's valid
+                quantity = parseInt(quantity);
+    
+                if (isNaN(quantity) || quantity <= 0) {
+                    throw new Error('Please enter a valid quantity above 0.');
+                }
+    
+                window.location.href = `/cart/${productId}?color=${colorId}&quantity=${quantity}`;
+            } catch (error) {
+                alert(error.message);
+            }
         }
-
+    
         function placeOrder(productId) {
-            var colorId = document.getElementById('color').value;
-            var quantity = document.getElementById('quantity').value;
-            window.location.href = `/order/${productId}?color=${colorId}&quantity=${quantity}`;
+            try {
+                var colorId = document.getElementById('color').value;
+                var quantity = document.getElementById('quantity').value;
+    
+                // Convert quantity to a number and check if it's valid
+                quantity = parseInt(quantity);
+    
+                if (isNaN(quantity) || quantity <= 0) {
+                    throw new Error('Please enter a valid quantity above 0.');
+                }
+    
+                window.location.href = `/order/${productId}?color=${colorId}&quantity=${quantity}`;
+            } catch (error) {
+                alert(error.message);
+            }
         }
     </script>
+    
 @endsection

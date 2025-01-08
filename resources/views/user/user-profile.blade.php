@@ -9,7 +9,7 @@
         Home
     </a>
 </div>
-<div class="w-full bg-white border-2 border-solid border-gray-200 shadow-2xl mx-5">
+<div class="bg-white border-2 border-solid border-gray-200 shadow-2xl mx-5">
     <div class="mx-10 my-5">
         <h1 class="font-bold text-lg">MY PROFILE</h1>
         <h5 class="text-sm">Manage and protect your account.</h5>

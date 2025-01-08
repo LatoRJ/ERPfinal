@@ -22,7 +22,3 @@
         <button type="submit" class="bg-gray-800 hover:bg-gray-600 text-white px-4 py-1 rounded">Apply Filter</button>
     </div>
 </form>
-
-<div class="w-[100%] bg-white px-5 p-6 mt-6">
-    <a href="{{ route('purchase.history') }}" class="block bg-[#22303F] text-white px-4 py-2 rounded text-center hover:bg-gray-600">Purchase History</a>
-</div>

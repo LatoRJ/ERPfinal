@@ -10,9 +10,9 @@
     </div>
 </div>
     <!-- Cart Table -->
-    <div class="bg-white shadow rounded-lg p-6">
+    <div class="bg-white shadow rounded-lg p-6 mx-5">
         <div class="flex justify-between items-center mb-4">
-            <a href="/home" class="text-[#22303F] hover:underline flex items-center">
+            <a href="/home" class="text-[#22303F] hover:text-blue-600 hover:underline flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="mr-2">
                     <path d="M10 19l-7-7 7-7"></path>
                 </svg>
@@ -73,9 +73,9 @@
         <!-- Cart Footer -->
         <div class="flex justify-between items-center mt-6">
             <div>
-                <button class="text-[#22303F] hover:underline">Select All</button>
-                <button class="text-red-500 hover:underline ml-4">Delete</button>
-                <button class="text-[#22303F] hover:underline ml-4">Move to Wishlist</button>
+                <button class="text-[#22303F] hover:text-blue-600 hover:underline">Select All</button>
+                <button class="text-red-500 hover:text-red-600 hover:underline ml-4">Delete</button>
+                <button class="text-[#22303F] hover:text-blue-600 hover:underline ml-4">Move to Wishlist</button>
             </div>
             <div class="text-right">
                 <span>Total ({{ session('cart') ? count(session('cart')) : 0 }} items):</span>

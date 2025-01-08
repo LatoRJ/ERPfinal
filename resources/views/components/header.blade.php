@@ -63,6 +63,12 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="{{ route('purchase.history') }}" class="flex items-center px-4 py-2 hover:bg-blue-200">
+                                    <x-purchaseIcon/>
+                                    My Purchases
+                                </a>
+                            </li>
+                            <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button type="submit"
