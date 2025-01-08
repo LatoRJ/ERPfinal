@@ -42,7 +42,8 @@
                         </td>
                         <td class="p-4">
                             <button class="px-4 py-2 text-sm text-white bg-blue-500 rounded-md" onclick="window.location.href='{{ route('admin.products.edit', $product->product_id) }}'">Edit</button>
-                            <form action="{{ route('admin.products.destroy', $product->product_id) }}" method="POST" class="inline">
+                            
+                            <form action="{{ route('admin.products.destroy', $product->product_id) }}" method="POST" class="inline" onsubmit="return confirmDelete(event)">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="px-4 py-2 text-sm text-white bg-red-500 rounded-md">Delete</button>
@@ -56,7 +57,14 @@
                     </div>
                 </div>
             </div>
-            
         </div>
-        
-        @endsection
+@endsection
+
+<script>
+    function confirmDelete(event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to delete this product?')) {
+            event.target.submit();
+        }
+    }
+</script>
