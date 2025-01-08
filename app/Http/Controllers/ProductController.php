@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with(['category', 'colors'])->paginate(5c);// Eager loading for optimization
+        $products = Product::with(['category', 'colors'])->paginate(5);// Eager loading for optimization
         $categories = Category::all(); // Fetch all categories
         return view('admin.productstocks', compact('products', 'categories'));
     }
