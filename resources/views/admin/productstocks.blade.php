@@ -49,8 +49,14 @@
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                    @endforeach
+                </table>
+                    <div class="mt-4">
+                        {{ $products->links('vendor.pagination.tailwind') }}
+                    </div>
                 </div>
             </div>
+            
         </div>
+        
         @endsection
